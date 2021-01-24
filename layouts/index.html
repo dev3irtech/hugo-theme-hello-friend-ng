@@ -10,6 +10,12 @@
             {{ end }}
 
             <h1>{{ .Site.Title }}</h1>
+            {{- with partial "chainsaw.html" . }}
+                <div>
+                    {{.}}
+                </div>
+            {{- end }}
+            
             {{- with .Site.Params.homeSubtitle }}
                 <p>{{.}}</p>
             {{- end }}
